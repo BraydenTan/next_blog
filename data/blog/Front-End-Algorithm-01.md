@@ -1,5 +1,5 @@
 ---
-title: Frond End Algorithm - Basic Leetcode with JavaScript
+title: Basic Leetcode with JavaScript 1
 date: '2023-01-04'
 tags: ['LeetCode', 'JavaScript']
 draft: false
@@ -24,7 +24,7 @@ Content Include
 - Related Math
 ```
 
-# <u>- Array 数组常用方法</u>
+# <u>Array 数组常用方法</u>
 
 ### 1 Push()
 
@@ -199,7 +199,7 @@ console.log(arr.toString()) // ‘1, 2, 3, 4, 5’
 console.log(arr) // [1, 2, 3, 4, 5]
 ```
 
-# <u>- String 字符串常用方法</u>
+# <u>String 字符串常用方法</u>
 
 ### 1 charAt()
 
@@ -346,7 +346,7 @@ console.log(str) // 输出：'http'
 console.log(str2) // 输出：'httphttphttp'
 ```
 
-# <u>- Traversal 用遍历方法&高阶函数</u>
+# <u>Traversal 用遍历方法&高阶函数</u>
 
 ### 1 for()
 
@@ -558,6 +558,7 @@ Object.getOwnPropertyNames(arr) // ["0", "1", "length"]
 #### 以上遍历方法的区别：
 
 ```js
+一：map()，forEach()，filter()循环的共同之处：
   1.forEach，map，filter循环中途是无法停止的，总是会将所有成员遍历完。
   2.他们都可以接受第二个参数，用来绑定回调函数内部的 this 变量，将回调函数内部的 this 对象，指向第二个参数，间接操作这个参数（一般是数组）。
 
@@ -576,3 +577,50 @@ Object.getOwnPropertyNames(arr) // ["0", "1", "length"]
    他们都是遍历对象的属性，也是接受一个对象作为参数，返回一个数组，包含了该对象自身的所有属性名。但Object.keys不能返回不可枚举的属性；Object.getOwnPropertyNames能返回不可枚举的属性。
 
 ```
+
+# <u>Regular expression 常用正则表达式</u>
+
+这里罗列一些我在刷算法题中遇到的正则表达式，如果有时间可认真学一下[正则表达式不要背](https://juejin.cn/post/6844903845227659271#heading-0)
+
+### 1.判断字符
+
+```js
+由26个英文字母组成的字符串：^[A-Za-z]+$
+由26个大写英文字母组成的字符串：^[A-Z]+$
+由26个小写英文字母组成的字符串：^[a-z]+$
+由数字和26个英文字母组成的字符串：^[A-Za-z0-9]+$
+```
+
+### 2.判断数字
+
+```js
+数字：^[0-9]*$
+```
+
+### 3 持续更新，敬请期待……
+
+# <u>五、数学知识</u>
+
+### 1.质数
+
+若一个正整数无法被除了 1 和它自身之外的任何自然数整除，则称该数为质数（或素数），否则称该正整数为合数。
+
+```js
+function judgePrime(n) {
+  for (let i = 2; i * i <= n; i++) {
+    if (n % i == 0) return false
+  }
+  return true
+}
+```
+
+### 2.斐波那契数列
+
+```js
+function Fibonacci(n) {
+  if (n <= 1) return n
+  return Fibonacci(n - 1) + Fibonacci(n - 2)
+}
+```
+
+### 3.其他 [刷算法题必备的数学考点汇总](https://zhuanlan.zhihu.com/p/301338035)
