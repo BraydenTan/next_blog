@@ -72,3 +72,28 @@ This mirror concept works for words with both even and odd letters
 - While Left less than Right
   - If Characters at Left and Right Pointer are not equal ,return false
 - Return True
+
+```js
+function isPalindrome(s) {
+  //Sanitize the input string *include Regular Expression
+  s = s.toLowerCase().replace(/[\W_]/g, '')
+  //e(/W_]/g,) = grab all nun alphanumeric characters, include space ,underscore
+  //LeetCode they don't test underscore but actual company will test.
+  let left = 0
+  let right = s.length - 1
+  while (left < right) {
+    if (s[left] !== s[right]) {
+      return false
+    }
+    left++
+    right--
+  }
+  return true
+}
+```
+
+### Complexity Analysis
+
+- Time Complexity = O(N)
+- Space Complexity = O(1)
+  - Left and Right Pointers take up constant space.
