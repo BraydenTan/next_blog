@@ -104,6 +104,12 @@ function example(n) {
 }
 ```
 
+### example(n)=> n^2+3n+4
+
+### =>f(n)=n^2+3n+4
+
+f(n)=Complexity,n=Input Size
+
 ```md
 log<sub>b</sub><sup>x</sup>+log<sub>b</sub><sup>y</sup>
 $log{_2}{n}$
